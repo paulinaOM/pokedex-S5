@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pokedex</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html"><b>Pokedex</b></a>
+        <button id="btn_navbar_toogle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./pokedex.html">Who is that Pokemon? <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="div-data">
+            <div class="div-image">
+                <img id="pokemon_image" class="flex-item">
+            </div>
+            <div id="div_poke_info">
+                <small id="pokemon_number"></small>
+                <h1 id="pokemon_name"></h1>
+                <p id="pokemon_description"></p>
+                <div id="pokemon_types"></div>
+                <h5>Weight</h5>
+                <p><span id="pokemon_weight"></span> kg.</p>
+                <h5>Height</h5> 
+                <p><span id="pokemon_height"></span> m.</p>
+                <div id="pokemon_abilities">
+                    <h5>Abilities</h5>
+                </div>
+            </div>
+        </div>
+        <div id="div_stats">
+            <h5>Stats</h5>
+            <table class="table">
+                <tbody id="table_stats">
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h5>Evolution</h5>
+            <div id="div_evolution" class="div-flex-h"></div>
+        </div>
+        <div class="div-moves">
+            <h5>Moves</h5>
+            <div class="div-overflow">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="left">Level</th>
+                            <th class="left">Move</th>
+                            <th class="left">Power</th>
+                            <th class="left">Damage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_moves">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal modal-fade" id="modal_ability_description" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="text_title" class="modal-title">Modal title</h5>
+                    <button id="btn_close_modal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="text_body">Modal body text goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <script src="./js/pokedex.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            showPokemonDetail();
+        </script>
+    </footer>
+</body>
+</html>
